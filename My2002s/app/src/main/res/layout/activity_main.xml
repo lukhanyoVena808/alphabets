@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:text="@string/app_name"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonA"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/slide1"
+            android:text="@string/slide1"
+            android:textSize="0sp"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonB"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide2"
+            android:textSize="0sp"
+            android:background="@drawable/slide2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonC"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide3"
+            android:textSize="0sp"
+            android:background="@drawable/slide3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonD"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide4"
+            android:textSize="0sp"
+            android:background="@drawable/slide4" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonE"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide5"
+            android:textSize="0sp"
+            android:background="@drawable/slide5"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonF"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide6"
+            android:textSize="0sp"
+            android:background="@drawable/slide6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonG"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide7"
+            android:textSize="0sp"
+            android:background="@drawable/slide7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonH"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide8"
+            android:textSize="0sp"
+            android:background="@drawable/slide8" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonI"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide9"
+            android:textSize="0sp"
+            android:background="@drawable/slide9"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonJ"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide10"
+            android:textSize="0sp"
+            android:background="@drawable/slide10" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonK"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide11"
+            android:textSize="0sp"
+            android:background="@drawable/slide11" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonL"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide12"
+            android:textSize="0sp"
+            android:background="@drawable/slide12" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonM"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide13"
+            android:textSize="0sp"
+            android:background="@drawable/slide13"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonN"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide14"
+            android:textSize="0sp"
+            android:background="@drawable/slide14" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonO"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide15"
+            android:textSize="0sp"
+            android:background="@drawable/slide15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonP"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide16"
+            android:textSize="0sp"
+            android:background="@drawable/slide16" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonQ"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide17"
+            android:textSize="0sp"
+            android:background="@drawable/slide17"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonR"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide18"
+            android:textSize="0sp"
+            android:background="@drawable/slide18" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonS"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide19"
+            android:textSize="0sp"
+            android:background="@drawable/slide19" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonT"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide20"
+            android:textSize="0sp"
+            android:background="@drawable/slide20" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonU"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide21"
+            android:textSize="0sp"
+            android:background="@drawable/slide21"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonV"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide22"
+            android:textSize="0sp"
+            android:background="@drawable/slide22" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonW"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide23"
+            android:textSize="0sp"
+            android:background="@drawable/slide23"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonX"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide24"
+            android:textSize="0sp"
+            android:background="@drawable/slide24" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonY"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide25"
+            android:textSize="0sp"
+            android:background="@drawable/slide25"
+            tools:ignore="NestedWeights" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonZ"
+            android:layout_width="25dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/slide26"
+            android:textSize="0sp"
+            android:background="@drawable/slide26" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
