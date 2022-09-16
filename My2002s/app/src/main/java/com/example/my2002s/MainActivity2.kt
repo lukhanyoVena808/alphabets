@@ -1,7 +1,10 @@
-package com.example.my2002s
+@file:Suppress("DEPRECATION")
 
+package com.example.my2002s
 import android.annotation.SuppressLint
+import android.os.AsyncTask
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -11,13 +14,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
+@Suppress("DEPRECATION")
 class MainActivity2 : AppCompatActivity(){
+
 
     private var nextImg : String? = null
     private var slide ="@string/empty"
     private var currentPosition: Int = 0   //local variable
     private lateinit var imgViewNew: ImageView
     private lateinit var theBar: ProgressBar
+
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +38,13 @@ class MainActivity2 : AppCompatActivity(){
 
         actionBar!!.setDefaultDisplayHomeAsUpEnabled(true)  //activate back button
         displayOnThread(alpha,imgViewNew) //display image using thread
-        Toast.makeText(this@MainActivity2, alpha, Toast.LENGTH_SHORT).show()
+
         currentPosition = (alpha?.substring(slide.length, alpha.length))!!.toInt()
 
-        previous(imgViewNew)
-        next(imgViewNew)
-        last(imgViewNew)
-        first(imgViewNew)
+        previous(imgViewNew)  //displays previous image
+        next(imgViewNew)  //next image
+        last() //last image
+        first() //first image
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
@@ -55,9 +61,11 @@ class MainActivity2 : AppCompatActivity(){
     /*
     * Get Id on String
     * */
+    @SuppressLint("DiscouragedApi")
     private fun getImage(imageName: String?): Int {
         val draw = getString(R.string.draw)
-        return resources.getIdentifier(imageName, draw, packageName)
+//        return resources.getIdentifier(imageName, draw, packageName)
+        return resources.getIdentifier(imageName, draw,packageName)
     }
 
 //
@@ -68,17 +76,19 @@ class MainActivity2 : AppCompatActivity(){
 
             if (currentPosition !=1){
                 currentPosition--
+                nextImg = slide+"$currentPosition"
+                displayOnThread(nextImg, imgView)
             }
             else{
-                theDelay()
                 currentPosition=26
+                val logic = Logic()
+                logic.execute()
+
             }
 
-            nextImg = slide+"$currentPosition"
-            displayOnThread(nextImg, imgView)
         }
     }
-//
+
     // * Get next letter
     private fun next(imgView: ImageView){
         //get next letter
@@ -86,18 +96,20 @@ class MainActivity2 : AppCompatActivity(){
         btnNext.setOnClickListener{
             if (currentPosition !=26){
                 currentPosition++
+                nextImg = slide+"$currentPosition"
+                displayOnThread(nextImg, imgView)
             }
             else{
-                theDelay()
                 currentPosition=1
+                val logic = Logic()
+                logic.execute()
             }
-            nextImg = slide+"$currentPosition"
-            displayOnThread(nextImg, imgView)
+
         }
     }
 
     //get last letter
-    private fun last(imgView: ImageView){
+    private fun last() {
         val btnNext = findViewById<Button>(R.id.button_last)
         btnNext.setOnClickListener{
             if (currentPosition ==26){
@@ -105,14 +117,14 @@ class MainActivity2 : AppCompatActivity(){
             }
             else{
                 currentPosition=26
-                nextImg = slide+"$currentPosition"
-                displayOnThread(nextImg, imgView)
+                val logic = Logic()
+                logic.execute()
             }
         }
     }
 
     //get first letter
-    private fun first(imgView: ImageView){
+    private fun first(){
         val btnNext = findViewById<Button>(R.id.button_first)
         btnNext.setOnClickListener{
             if (currentPosition ==1){
@@ -120,11 +132,11 @@ class MainActivity2 : AppCompatActivity(){
             }
             else{
                 currentPosition=1
-
-                nextImg = slide+"$currentPosition"
-                displayOnThread(nextImg, imgView)
+                val logic = Logic()
+                logic.execute()
             }
         }
+
     }
 
     private fun onLastPage(){
@@ -145,34 +157,42 @@ class MainActivity2 : AppCompatActivity(){
         }.start()
     }
 
-    private fun showProgress() {
-        theBar.visibility = View.VISIBLE
-    }
 
-    private fun hideProgress() {
-        theBar.visibility = View.GONE
-    }
+    @SuppressLint("StaticFieldLeak")
+    inner class Logic : AsyncTask<Void, Any, Any>() {
 
-    private fun theDelay(){
-        Thread {
-            this@MainActivity2.runOnUiThread {
-                showProgress()
+        var count = 0
+
+        @Deprecated("Deprecated in Java")
+        override fun onPreExecute() {
+            theBar.visibility = View.VISIBLE
+        }
+
+
+        @Deprecated("Deprecated in Java")
+        @Suppress("DEPRECATION")
+        override fun doInBackground(vararg params: Void?) {
+            while (count < 2) {
+                SystemClock.sleep(300)
+                count++
+                publishProgress(count * 20)
             }
+            nextImg = slide+"$currentPosition"
+            imgViewNew.setImageResource(getImage(nextImg))
 
-            try {
-                var i = 0
-                while (i < 85000000) {
-                    i++
-                }
-            } catch (e: InterruptedException) {
-                e.printStackTrace()
-            }
+        }
 
-            this@MainActivity2.runOnUiThread{
-                hideProgress()
-            }
-        }.start()
+        @Deprecated("Deprecated in Java")
+        override fun onProgressUpdate(vararg values: Any?) {
+            theBar.progress = values[0] as Int
+        }
+
+        @Deprecated("Deprecated in Java")
+        override fun onPostExecute(result: Any?) {
+            theBar.visibility = View.GONE
+        }
     }
-
 }
+
+
 

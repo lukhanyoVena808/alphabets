@@ -36,6 +36,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:src="@drawable/slide1"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/imgDescription" />
 
     <LinearLayout

@@ -23,6 +23,7 @@
         style="?android:attr/progressBarStyle"
         android:visibility="gone"
         android:layout_width="match_parent"
+        android:max="100"
         android:layout_height="wrap_content" />
 
 
