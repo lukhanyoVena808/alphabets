@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">The English Alphabets</string>
+    <string name="app_name">The English Alphabet</string>
     <string name="nick">Alphabet</string>
-    <string name="previous_image">Previous Alphabet</string>
-    <string name="next_image">Next Alphabet</string>
-    <string name="first_image">First Alphabet</string>
-    <string name="last_image">Last Alphabet</string>
+    <string name="previous_image">Previous letter</string>
+    <string name="next_image">Next letter</string>
+    <string name="first_image">First letter</string>
+    <string name="last_image">Last letter</string>
     <string name="img">image</string>
     <string name="TODO">TODO</string>
     <string name="slide1">slide1</string>
@@ -36,11 +36,15 @@
     <string name="slider">slide</string>
     <string name="draw">drawable</string>
     <string name="intent1">alpha</string>
-    <string name="intent2">omega</string>
     <string name="opening">Pick A Letter</string>
-    <string name="lastPhrase">This is the last alphabet</string>
-    <string name="firstPhrase">This is the first alphabet</string>
+    <string name="lastPhrase">This is the last letter</string>
+    <string name="firstPhrase">This is the first letter</string>
     <string name="imgDescription">ImageViewer</string>
-    <string name="empty" />
+    <string name="empty"></string>
+    <string name="loading">Loading Previous Image</string>
+    <string name="password">s</string>
+    <string name="key">b8</string>
+    <string name="overview">Going to…Overview</string>
+
 
 </resources>
