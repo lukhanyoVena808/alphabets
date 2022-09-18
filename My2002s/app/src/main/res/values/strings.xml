@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">The English Alphabet</string>
+    <string name="nick">Alphabet</string>
+    <string name="previous_image">Previous letter</string>
+    <string name="next_image">Next letter</string>
+    <string name="first_image">First letter</string>
+    <string name="last_image">Last letter</string>
+    <string name="img">image</string>
+    <string name="TODO">TODO</string>
+    <string name="slide1">slide1</string>
+    <string name="slide2">slide2</string>
+    <string name="slide3">slide3</string>
+    <string name="slide4">slide4</string>
+    <string name="slide5">slide5</string>
+    <string name="slide6">slide6</string>
+    <string name="slide7">slide7</string>
+    <string name="slide8">slide8</string>
+    <string name="slide9">slide9</string>
+    <string name="slide10">slide10</string>
+    <string name="slide11">slide11</string>
+    <string name="slide12">slide12</string>
+    <string name="slide13">slide13</string>
+    <string name="slide14">slide14</string>
+    <string name="slide15">slide15</string>
+    <string name="slide16">slide16</string>
+    <string name="slide17">slide17</string>
+    <string name="slide18">slide18</string>
+    <string name="slide19">slide19</string>
+    <string name="slide20">slide20</string>
+    <string name="slide21">slide21</string>
+    <string name="slide22">slide22</string>
+    <string name="slide23">slide23</string>
+    <string name="slide24">slide24</string>
+    <string name="slide25">slide25</string>
+    <string name="slide26">slide26</string>
+    <string name="slider">slide</string>
+    <string name="draw">drawable</string>
+    <string name="intent1">alpha</string>
+    <string name="opening">Pick A Letter</string>
+    <string name="lastPhrase">This is the last letter</string>
+    <string name="firstPhrase">This is the first letter</string>
+    <string name="imgDescription">ImageViewer</string>
+    <string name="empty"></string>
+    <string name="loading">Loading Previous Image</string>
+    <string name="password">s</string>
+    <string name="key">b8</string>
+    <string name="overview">Going to…Overview</string>
+
+
+</resources>
